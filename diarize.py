@@ -100,9 +100,11 @@ parser.add_argument(
 )
 parser.add_argument(
     "--txt-timestamps",
-    action="store_true",
+    type=int,
+    default=0,
+    choices=[0, 1],
     dest="txt_timestamps",
-    help="Whether to include word-level timestamps in the output text file (1 for yes, 0 for no)"
+    help="Whether to include word-level timestamps in the output text file (1 for yes, 0 for no). Default is 0.",
 )
 
 args = parser.parse_args()
